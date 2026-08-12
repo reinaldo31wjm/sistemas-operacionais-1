@@ -136,10 +136,39 @@ Muitos sistemas modernos oferecem suporte a ambos os tipos.
 
 ## 🗺️ Mapa Mental
 
-Veja o arquivo `mapa-mental-so.mermaid` para a versão em diagrama interativo.
-
----
-
+```
+Sistema Operacional
+├── Conceito
+│   ├── Definição formal
+│   ├── Intermediário usuário–hardware
+│   └── Abstração da complexidade
+├── Evolução
+│   ├── Antes do SO (um programa por vez)
+│   └── Surgimento (batch → multiprogramação)
+├── Funções principais
+│   ├── CPU
+│   ├── Memória
+│   ├── Dispositivos
+│   ├── Arquivos
+│   └── Interface com usuário
+├── Interfaces
+│   ├── GUI
+│   └── CLI
+├── Tipos de SO
+│   ├── Desktop
+│   ├── Servidor
+│   ├── Móvel
+│   └── Embarcado
+├── Exemplos
+│   ├── Windows
+│   ├── Linux
+│   ├── macOS
+│   └── Android / iOS
+└── O que NÃO faz
+    ├── Não desenvolve aplicações
+    ├── Não substitui hardware
+    └── Não corrige erros lógicos
+```
 ## ✅ Considerações Finais
 
 O Sistema Operacional é o **elemento central** de qualquer sistema computacional moderno. Compreender seus conceitos iniciais é essencial para entender:

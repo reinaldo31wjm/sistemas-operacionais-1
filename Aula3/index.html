@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kernel OS Workstation & Simulator v3.5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="brand-icon"></div>
+        <div class="brand-text">
+          <h1>Kernel Workstation</h1>
+          <span class="version-tag">v3.5 Enterprise</span>
+        </div>
+      </div>
+      <div class="header-status">
+        <div class="status-badge">
+          <div class="pulse-dot"></div>
+          KERNEL ONLINE
+        </div>
+        <div class="clock" id="systemClock">00:00:00</div>
+      </div>
+    </header>
+
+    <!-- Bar Controls -->
+    <section class="controls-bar">
+      <div class="control-group">
+        <label for="algorithmSelect">Escalonador CPU:</label>
+        <select id="algorithmSelect">
+          <option value="FCFS">FCFS (First-Come, First-Served)</option>
+          <option value="RR">Round Robin (Quantum = 2s)</option>
+          <option value="SJF">SJF (Shortest Job First)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="speedSelect">Velocidade Clock:</label>
+        <select id="speedSelect">
+          <option value="1">1x (Normal)</option>
+          <option value="2">2x (Rápido)</option>
+          <option value="5">5x (Ultra)</option>
+        </select>
+      </div>
+
+      <div class="control-group action-buttons">
+        <button class="btn btn-primary" id="addProcBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Novo Processo
+        </button>
+        <button class="btn btn-secondary" id="clearLogsBtn">Limpar Terminal</button>
+      </div>
+    </section>
+
+    <!-- System Dashboard Metrics -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-title">Uso da CPU</span>
+          <span class="metric-icon">⚡</span>
+        </div>
+        <div class="metric-value" id="cpuVal">0%</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="cpuBar"></div></div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-title">Páginas RAM (Alocação)</span>
+          <span class="metric-icon">🧠</span>
+        </div>
+        <div class="metric-value" id="ramVal">0 / 16 Blk</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="ramBar"></div></div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-title">Fila de Processos</span>
+          <span class="metric-icon">📊</span>
+        </div>
+        <div class="metric-value" id="procCountVal">0</div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="procBar"></div></div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-title">Trocas de Contexto</div>
+        <div class="metric-value" id="contextSwitchesVal">0</div>
+        <div class="sub-label">Eventos do Escalonador</div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Split -->
+    <div class="main-grid">
+      <div class="left-column">
+        <!-- Process Table -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Tabela de Control de Processos (PCB)</span>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>PID</th>
+                  <th>Nome</th>
+                  <th>Status</th>
+                  <th>RAM</th>
+                  <th>Burst</th>
+                  <th>Progresso</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="procTableBody">
+                <!-- Linhas inseridas via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Physical RAM Grid -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Mapa Físico de Memória RAM (Paging System)</span>
+            <span class="panel-subtitle">16 Páginas de 4KB</span>
+          </div>
+          <div class="memory-grid" id="memoryMap">
+            <!-- 16 blocos via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Terminal Console -->
+      <div class="right-column">
+        <div class="panel terminal-panel">
+          <div class="panel-header">
+            <span class="panel-title">Kernel System Log</span>
+            <span class="terminal-dot"></span>
+          </div>
+          <div class="terminal" id="terminalLog">
+            <div class="term-line"><span class="term-time">[00:00:00]</span> Kernel 3.5-Enterprise inicializado com sucesso.</div>
+            <div class="term-line"><span class="term-time">[00:00:00]</span> Gerenciador de Paginação RAM pronto (16 blocos).</div>
+            <div class="term-line"><span class="term-time">[00:00:00]</span> Aguardando novas tarefas na Fila de Pronto...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparative OS Matrix -->
+    <section class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Matriz Comparativa de Arquiteturas de SO</span>
+      </div>
+      <div class="arch-matrix">
+        <div class="arch-card">
+          <div class="arch-header">
+            <div class="arch-icon linux">🐧</div>
+            <h3>Linux Kernel</h3>
+          </div>
+          <ul>
+            <li><strong>Arquitetura:</strong> Monolítico Modular</li>
+            <li><strong>Escalonador:</strong> CFS (Completely Fair Scheduler)</li>
+            <li><strong>Memória:</strong> Buddy Allocator + SLAB/SLUB</li>
+            <li><strong>Foco:</strong> Servidores, Cloud, HPC, Android</li>
+          </ul>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-header">
+            <div class="arch-icon windows">🪟</div>
+            <h3>Windows NT</h3>
+          </div>
+          <ul>
+            <li><strong>Arquitetura:</strong> Híbrido</li>
+            <li><strong>Escalonador:</strong> Preemptivo por Prioridade (32 níveis)</li>
+            <li><strong>Memória:</strong> VMM com Paging File</li>
+            <li><strong>Foco:</strong> Desktops, Jogos, Redes Corporativas</li>
+          </ul>
+        </div>
+
+        <div class="arch-card">
+          <div class="arch-header">
+            <div class="arch-icon mac">🍎</div>
+            <h3>macOS (XNU)</h3>
+          </div>
+          <ul>
+            <li><strong>Arquitetura:</strong> Híbrido (Mach + BSD Kernel)</li>
+            <li><strong>Escalonador:</strong> Mach Multi-layer Feedback Queue</li>
+            <li><strong>Memória:</strong> Mach VM com Compressão de Memória</li>
+            <li><strong>Foco:</strong> Estações de trabalho, Áudio/Vídeo, UI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

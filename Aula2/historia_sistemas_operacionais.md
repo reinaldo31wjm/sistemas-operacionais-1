@@ -941,11 +941,11 @@ As figuras e diagramas foram organizados com finalidade didática. Utilizam flux
 
 ## Referências
 
-[1]: ./sse.pdf "Material fornecido: excerto de Sistemas Operacionais Modernos, capítulo introdutório sobre história, conceitos e gerações de sistemas operacionais"
-[2]: https://pubs.aip.org/aip/jcp/article/21/8/1270/202050/An-Experimental-Time-Sharing-System "Corbató et al., trabalho clássico sobre sistemas de tempo compartilhado"
-[3]: https://www.multicians.org/ "Multicians.org, arquivo histórico do projeto MULTICS"
-[4]: https://pubs.opengroup.org/onlinepubs/9699919799/ "The Open Group, especificação POSIX"
-[5]: https://www.kernel.org/ "Linux Kernel Archives"
-[6]: https://www.minix3.org/ "MINIX 3, sistema educacional e orientado à confiabilidade"
-[7]: https://www.cs.cmu.edu/afs/cs/project/mach/public/www/mach.html "Carnegie Mellon University, projeto Mach"
-[8]: https://www.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2020.html "IBM, história de mainframes e da família System/360"
+1. [1] [Material fornecido: excerto de Sistemas Operacionais Modernos](./sse.pdf)
+2. [2] [Corbató et al., trabalho clássico sobre sistemas de tempo compartilhado](https://pubs.aip.org/aip/jcp/article/21/8/1270/202050/An-Experimental-Time-Sharing-System)
+3. [3] [Multicians.org, arquivo histórico do projeto MULTICS](https://www.multicians.org/)
+4. [4] [The Open Group, especificação POSIX](https://pubs.opengroup.org/onlinepubs/9699919799/)
+5. [5] [Linux Kernel Archives](https://www.kernel.org/)
+6. [6] [MINIX 3, sistema educacional e orientado à confiabilidade](https://www.minix3.org/)
+7. [7] [Carnegie Mellon University, projeto Mach](https://www.cs.cmu.edu/afs/cs/project/mach/public/www/mach.html)
+8. [8] [IBM, história de mainframes e da família System/360](https://www.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2020.html)

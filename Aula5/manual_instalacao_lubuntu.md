@@ -2,8 +2,6 @@
 
 ![Lubuntu](https://img.shields.io/badge/Lubuntu-26.04%20LTS-58a6ff?style=for-the-badge&logo=linux&logoColor=white) ![VirtualBox](https://img.shields.io/badge/Oracle-VirtualBox-2ea043?style=for-the-badge&logo=virtualbox&logoColor=white) ![Status](https://img.shields.io/badge/Status-Guia%20Ativo-21262d?style=for-the-badge)
 
-> Documento no estilo Markdown, com visual moderno inspirado em documentação técnica *dark mode*, blocos destacados e checklist de progresso.
-
 ---
 
 ## 🟢 Status do Guia

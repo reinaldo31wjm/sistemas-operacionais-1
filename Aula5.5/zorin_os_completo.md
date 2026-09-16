@@ -197,7 +197,7 @@ Para um trabalho de sistemas operacionais virtualizados, a configuração recome
 
 A principal conclusão da comparação é que o Zorin OS não precisa ser apresentado como superior a todas as outras distribuições. Ele se destaca por uma finalidade específica: **tornar a transição para o Linux mais familiar, reversível e acessível**.
 
-## Referências
+## 12. Referências
 
 1. [1] [Technical details about Zorin OS](https://zorin.com/os/details/)
 2. [2] [Zorin OS 18 Has Arrived](https://blog.zorin.com/2025/10/14/zorin-os-18-has-arrived/)

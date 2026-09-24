@@ -1,0 +1,25 @@
+{
+  "name": "cloud-so-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dashboard Node.js e Express.js para métricas do sistema e do processo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "check": "node --check index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "system-monitor",
+    "cloud-computing"
+  ],
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

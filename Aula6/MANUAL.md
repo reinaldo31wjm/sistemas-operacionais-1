@@ -963,10 +963,10 @@ A principal conclusão experimental é que a aplicação mede o ambiente do serv
 
 ## Referências essenciais
 
-[1]: https://nodejs.org/api/os.html "Node.js OS module"
-[2]: https://expressjs.com/ "Express.js documentation"
-[3]: https://render.com/docs/deploy-node-express-app "Deploy Node.js and Express on Render"
-[4]: https://csrc.nist.gov/pubs/sp/800/145/final "NIST cloud computing definition"
+1. [1] [Node.js OS module](https://nodejs.org/api/os.html)
+2. [2] [Express.js documentation](https://expressjs.com/)
+3. [3] [Deploy Node.js and Express on Render](https://render.com/docs/deploy-node-express-app)
+4. [4] [NIST cloud computing definition](https://csrc.nist.gov/pubs/sp/800/145/final)
 
 **Projeto:** `cloud-so-app`  
 **Documento principal:** Manual técnico de desenvolvimento, testes e publicação.

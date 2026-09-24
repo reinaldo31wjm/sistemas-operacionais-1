@@ -1,0 +1,19 @@
+{
+  "name": "cloud-so-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monitor web do sistema operacional com Node.js e Express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "check": "node --check index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

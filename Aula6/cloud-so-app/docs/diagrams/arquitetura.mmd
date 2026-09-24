@@ -1,0 +1,15 @@
+flowchart LR
+  U[Usuário / navegador] -->|HTTPS GET /| R[Render Web Service]
+  R --> P[Processo Node.js]
+  P --> E[Express.js]
+  E --> H[Middleware CORS]
+  E --> T[Rota HTML /]
+  E --> A[API JSON /api/status]
+  E --> Q[Health check /health]
+  T --> O[Módulo nativo os]
+  A --> O
+  O --> S[Sistema operacional hospedeiro]
+  S --> V[VM ou container virtualizado]
+  V --> X[Infraestrutura cloud]
+  G[GitHub] -->|Deploy contínuo| R
+  P -->|SIGTERM/SIGINT| Z[Encerramento gracioso]
